@@ -89,8 +89,8 @@ stat-formats:
   default: "&7%stat%: &f%original% &7-> &a%new% &e(+%diff%)"
   # Specific format for certain stats (add '%%' to display the percent sign)
   specific:
-    CRITICAL_STRIKE_CHANCE: "&9%stat%: &f%original%%% &7-> &a%new%%% &e(+%diff%%%)"
-    CRITICAL_STRIKE_POWER: "&9%stat%: &f%original%%% &7-> &a%new%%% &e(+%diff%%%)"
+    CRITICAL_STRIKE_CHANCE: "&9%stat%: &f%original%% &7-> &a%new%% &e(+%diff%%)"
+    CRITICAL_STRIKE_POWER: "&9%stat%: &f%original%% &7-> &a%new%% &e(+%diff%%)"
 ```
 
 ### `items.yml`
