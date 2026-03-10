@@ -2,7 +2,7 @@
 
 **MMOItems Stations** is a powerful and flexible Spigot/Paper plugin designed to create an in-depth item upgrade system for MMOItems. With an intuitive graphical interface and high customizability, you can create a unique upgrade experience for your players.
 
- _(Suggestion: You can take a screenshot of the GUI and replace this link)_
+I hate to write these mf description.
 
 ---
 
