@@ -24,10 +24,11 @@ I hate to write these mf description.
 
 ## ⚙️ Installation
 
-1.  Download the latest `.jar` file from the [Releases](https://github.com/your-username/your-repo/releases) page.
+1.  Buy plugin from Polymart or Blockmart.app
 2.  Place the `.jar` file into your server's `plugins` folder.
 3.  Install the required dependencies:
     *   [MMOItems](https://www.spigotmc.org/resources/mmoitems.39267/)
+    *   [MythicLib](https://www.spigotmc.org/resources/mmolib-mythiclib.90306/)
     *   [Vault](https://www.spigotmc.org/resources/vault.34315/) (and an economy plugin like [EssentialsX](https://essentialsx.net/))
 4.  Restart the server. The `config.yml` and `items.yml` configuration files will be generated automatically.
 
