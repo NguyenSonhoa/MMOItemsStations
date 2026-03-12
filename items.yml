@@ -1,0 +1,24 @@
+items:
+  ARMOR:
+    HELMET_B_MAP2_0: &map2_b_stats
+      max-level: 20
+      stat-increase-percent:
+        MAX_HEALTH: 15
+      cost:
+        vault:
+          base-cost: 10000.0
+          increase-per-level: 1000.0
+      materials:
+        - type: "VANILLA"
+          id: "IRON_BLOCK"
+          display-material: "&fIron Block"
+          base-amount: 5
+          increase-per-level: 1
+        - type: "MMOITEMS"
+          item-types: "MATERIAL"
+          id: "DINO_BONE"
+          base-amount: 50
+          increase-per-level: 5
+    CHESTPLATE_B_MAP2_0: *map2_b_stats
+    LEGGINGS_B_MAP2_0: *map2_b_stats
+    BOOTS_B_MAP2_0: *map2_b_stats

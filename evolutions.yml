@@ -1,0 +1,63 @@
+#----------------------------------------------------------------#
+#                                                                #
+#                      Evolution Recipes                         #
+#                                                                #
+#----------------------------------------------------------------#
+#
+# This file defines how items can be evolved into other items.
+# Each evolution recipe is defined under a unique ID.
+#
+# SYNTAX:
+#
+# EVOLUTION_ID:
+#   # The item that can be evolved.
+#   source:
+#     type: "MMOITEMS_TYPE"
+#     id: "MMOITEMS_ID"
+#
+#   # The item that the source will evolve into.
+#   result:
+#     type: "MMOITEMS_TYPE"
+#     id: "MMOITEMS_ID"
+#
+#   # (Optional) Requirements for the evolution.
+#   requirements:
+#     # The minimum upgrade level the source item must have.
+#     upgrade-level: 15
+#
+#     # (Optional) Vault cost for the evolution.
+#     cost: 50000.0
+#
+#     # (Optional) A list of materials required for the evolution.
+#     # Same syntax as materials in items.yml
+#     materials:
+#       - type: "VANILLA"
+#         id: "NETHER_STAR"
+#         display-material: "Nether Star"
+#         amount: 1
+#       - type: "MMOITEMS"
+#         item-types: "MATERIAL"
+#         id: "ETERNAL_FLAME"
+#         amount: 5
+#
+# EXAMPLE:
+#
+DragonSlayerEvolution:
+  source:
+    type: "SWORD"
+    id: "DRAGON_SLAYER"
+  result:
+    type: "SWORD"
+    id: "ASCENDED_DRAGON_SLAYER"
+  requirements:
+    upgrade-level: 20
+    cost: 100000.0
+    materials:
+      - type: "VANILLA"
+        id: "DRAGON_EGG"
+        display-material: "Dragon Egg"
+        amount: 1
+      - type: "MMOITEMS"
+        item-types: "MATERIAL"
+        id: "SOUL_OF_THE_DRAGON"
+        amount: 3

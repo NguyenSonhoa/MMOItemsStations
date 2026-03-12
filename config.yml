@@ -1,0 +1,134 @@
+upgrade-gui:
+  title: "&8Upgrade Menu"
+  size: 27
+  # Slot configuration
+  slots:
+    upgrade-item: 10
+    confirm-button: 16
+    preview-item: 13
+  # Filler item for empty slots
+  filler:
+    material: "GRAY_STAINED_GLASS_PANE"
+    custom-model-data: 0
+    name: " "
+
+  items:
+    confirm-button:
+      material: "LIME_STAINED_GLASS_PANE"
+      name: "&a&lCONFIRM UPGRADE"
+      custom-model-data: 0
+      lore:
+        - "&7Click to upgrade your item."
+        - "&7Cost: &e%cost%$"
+        - "&7Materials:"
+        - "%materials%" # This placeholder will be replaced by the list of materials
+    
+    # This button is shown when no item is in the upgrade slot
+    no-item-button:
+      material: "RED_STAINED_GLASS_PANE"
+      name: "&c&lNO ITEM"
+      custom-model-data: 0
+      lore:
+        - "&7Please place an item"
+        - "&7in the slot to upgrade."
+#----------------------------------------------------------------#
+#                      Evolution GUI Settings                    #
+#----------------------------------------------------------------#
+evolution-gui:
+  title: "&dEvolution Station"
+  size: 27
+  slots:
+    source-item: 10
+    preview-item: 12
+    confirm-button: 16
+  filler:
+    material: "PURPLE_STAINED_GLASS_PANE"
+    name: " "
+    custom-model-data: 10011
+  items:
+    confirm-button:
+      material: "MAGENTA_STAINED_GLASS_PANE"
+      name: "&d&lEVOLVE"
+      custom-model-data: 10012
+      lore:
+        - "&7Click to evolve your item."
+        - "&7Cost: &e%cost%$"
+        - "&7Materials:"
+        - "%materials%"
+    no-item-button:
+      material: "RED_STAINED_GLASS_PANE"
+      name: "&c&lNO ITEM"
+      custom-model-data: 10013
+      lore:
+        - "&7Place an item in the slot to evolve."
+formats:
+  upgrade-level: "&7Upgrade Level: &e%level%"
+  enhancement-preview-header: "&eEnhancement Preview:"
+  enhancement-preview-line: "&7%stat%: &f%original% &7-> &a%new% &e(+%diff%)"
+  material-line: "&7- &f%material% &fx%amount%"
+  max-level-lore: "&7Max Level"
+  invalid-item-lore: "&cInvalid Item"
+
+  evolution-lore:
+    level-met: "&a✔ &7Required Level: &e%level%"
+    level-not-met: "&c❌ &7Required Level: &e%level%"
+    cost-met: "&a✔ &7Cost: &e%cost%$"
+    cost-not-met: "&c❌ &7Cost: &e%cost%$"
+    materials-header: "&7Materials:"
+    material-met: "&a✔ &7%material% x%amount%"
+    material-not-met: "&c❌ &7%material% x%amount%"
+stat-formats:
+  default: "&7%stat%: &f%original% &7-> &a%new% &e(+%diff%)"
+  specific:
+    CRITICAL_STRIKE_CHANCE: "&7%stat%: &f%original%% &7-> &a%new%% &e(+%diff%%)"
+    CRITICAL_STRIKE_POWER: "&7%stat%: &f%original%% &7-> &a%new%% &e(+%diff%%)"
+upgrade-settings:
+  # Default settings used when an item is not defined in items.yml
+  max-level: 10
+  # Percentage damage increase per level
+  damage-increase-percent: 5.0
+  # Title format: %name% +%level%
+  title-format: "%name% &e+%level%"
+
+  # Cost settings
+  cost:
+    vault:
+      enabled: true
+      base-cost: 1000.0
+      increase-per-level: 500.0
+
+  # Default material settings (used as a fallback)
+  material:
+    # Options: VANILLA, MMOITEMS
+    type: VANILLA
+    # Vanilla Material name or MMOItem ID
+    id: DIAMOND
+    # Only required if type is MMOITEMS (e.g. MATERIAL, CONSUMABLE)
+    mmoitem-type: MATERIAL
+    base-amount: 1
+    increase-per-level: 1
+
+sounds:
+  success: "BLOCK_SMITHING_TABLE_USE"
+  fail: "block.beacon.deactivate"
+  click: "UI_BUTTON_CLICK"
+  evolution-success: "ui.toast.challenge_complete"
+  evolution-fail: "block.beacon.deactivate"
+  evolution-click: "UI_BUTTON_CLICK"
+messages:
+  reload: "&aConfiguration reloaded."
+  no-permission: "&cYou don't have permission."
+  success: "&aItem upgraded to level %level%!"
+  fail: "&cUpgrade failed."
+  max-level: "&cMax level reached."
+  not-enough-money: "&cNot enough money. You need %cost%$."
+  not-enough-material: "&cNot enough materials."
+  invalid-item: "&cThis item cannot be upgraded."
+  # Evolution Messages
+  evolution-success: "&aYour item has successfully evolved!"
+  evolution-fail: "&cEvolution failed."
+  evolution-not-evolvable: "&cThis item cannot be evolved."
+  evolution-level-not-met: "&cItem does not meet the required upgrade level."
+  evolution-not-enough-money: "&cYou do not have enough money."
+  evolution-missing-materials: "&cYou are missing required materials."
+  evolution-error: "&cAn error occurred while creating the evolved item."
