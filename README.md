@@ -42,7 +42,7 @@ I hate to write these mf description.
 | `/upgrade` | Opens the item upgrade interface. | `mmoitemsstations.use` | Player |
 | `/upgrade reload` | Reloads the configuration files. | `mmoitemsstations.admin.reload` | Admin |
 | `/upgrade open <player>` | Opens the upgrade GUI for a specific player. | `mmoitemsstations.admin.open` | Admin, Console |
-
+| `/upgrade setlevel <level> <player>` | Set level of weapon for player. | `mmoitemsstations.setlevel` | OP, Console |
 ---
 
 ## 🔧 Configuration
