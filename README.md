@@ -7,7 +7,8 @@ I hate to write these mf description.
 ---
 
 ## ✨ Features
-
+- **Upgrade, Evolution.**
+  **Anchor yml section**: you can copy paste make it clean in items.yml
 - **GUI-Based Upgrading**: A user-friendly graphical interface that allows players to easily place items, preview, and perform upgrades.
 - **Limitless Customization**:
     - **Costs & Materials**: Customize upgrade costs (requires [Vault](https://www.spigotmc.org/resources/vault.34315/)) and the required materials (supports both Vanilla and MMOItems).
