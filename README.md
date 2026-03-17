@@ -21,6 +21,7 @@ I hate to write these mf description.
 - **Admin Commands**: `/upgrade reload` to reload configurations and `/upgrade open <player>` to remotely open the GUI for other players.
 - **User Experience**: Supports shift-clicking for quick item placement.
 - **Custom Messages & Sounds**: Customize all messages and sounds for success or failure actions.
+- **Chance Buff**: Gacha with upgrade lol. Option that user can add item to increase chance.
 
 ---
 
