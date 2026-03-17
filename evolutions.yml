@@ -24,6 +24,7 @@
 #   requirements:
 #     # The minimum upgrade level the source item must have.
 #     upgrade-level: 15
+#     success-rate: 50.0
 #
 #     # (Optional) Vault cost for the evolution.
 #     cost: 50000.0
@@ -51,6 +52,7 @@ DragonSlayerEvolution:
     id: "ASCENDED_DRAGON_SLAYER"
   requirements:
     upgrade-level: 20
+    success-rate: 50.0
     cost: 100000.0
     materials:
       - type: "VANILLA"

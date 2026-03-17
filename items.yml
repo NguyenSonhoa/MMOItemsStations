@@ -1,6 +1,12 @@
 items:
   ARMOR:
+    # ==========================================
+    #                 MAP 2
+    # ==========================================
+    # --- TIER F (Common) ---
     HELMET_B_MAP2_0: &map2_b_stats
+      base-success-rate: 100.0
+      per-level-success-rate-decrease: 10.0
       max-level: 20
       stat-increase-percent:
         MAX_HEALTH: 15
