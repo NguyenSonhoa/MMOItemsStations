@@ -6,10 +6,11 @@ upgrade-gui:
     upgrade-item: 10
     confirm-button: 16
     preview-item: 13
+    chance-item: 11
   # Filler item for empty slots
   filler:
     material: "GRAY_STAINED_GLASS_PANE"
-    custom-model-data: 0
+    custom-model-data: 1
     name: " "
 
   items:
@@ -22,6 +23,7 @@ upgrade-gui:
         - "&7Cost: &e%cost%$"
         - "&7Materials:"
         - "%materials%" # This placeholder will be replaced by the list of materials
+        - "&7Success Rate: &a%success_rate%%"
     
     # This button is shown when no item is in the upgrade slot
     no-item-button:
@@ -31,6 +33,32 @@ upgrade-gui:
       lore:
         - "&7Please place an item"
         - "&7in the slot to upgrade."
+
+    chance-item-display:
+      material: "YELLOW_STAINED_GLASS_PANE"
+      name: "&e&lCHANCE ITEM"
+      custom-model-data: 0
+      lore:
+        - "&7Place a chance item here"
+        - "&7to increase success rate."
+
+    preview-item-display:
+      material: "BLUE_STAINED_GLASS_PANE"
+      name: "&b&lPREVIEW"
+      custom-model-data: 0
+      lore:
+        - "&7The upgraded item will"
+        - "&7appear here."
+  
+  chance-item:
+    # Increase percentage success rate
+    increase-chance: 10.0
+    # Options: VANILLA, MMOITEMS
+    type: MMOITEMS
+    # Vanilla Material name or MMOItem ID
+    id: SUCCESS_GEM
+    # Only required if type is MMOITEMS (e.g. MATERIAL, CONSUMABLE)
+    mmoitem-type: CONSUMABLE
 #----------------------------------------------------------------#
 #                      Evolution GUI Settings                    #
 #----------------------------------------------------------------#
@@ -41,6 +69,7 @@ evolution-gui:
     source-item: 10
     preview-item: 12
     confirm-button: 16
+    chance-item: 11
   filler:
     material: "PURPLE_STAINED_GLASS_PANE"
     name: " "
@@ -55,12 +84,40 @@ evolution-gui:
         - "&7Cost: &e%cost%$"
         - "&7Materials:"
         - "%materials%"
+        - "&7Success Rate: &a%success_rate%%"
     no-item-button:
       material: "RED_STAINED_GLASS_PANE"
       name: "&c&lNO ITEM"
       custom-model-data: 10013
       lore:
         - "&7Place an item in the slot to evolve."
+
+    chance-item-display:
+      material: "YELLOW_STAINED_GLASS_PANE"
+      name: "&e&lCHANCE ITEM"
+      custom-model-data: 0
+      lore:
+        - "&7Place a chance item here"
+        - "&7to increase success rate."
+
+    preview-item-display:
+      material: "BLUE_STAINED_GLASS_PANE"
+      name: "&b&lPREVIEW"
+      custom-model-data: 0
+      lore:
+        - "&7The evolved item will"
+        - "&7appear here."
+  
+  chance-item:
+    # Increase percentage success rate
+    increase-chance: 15.0
+    # Options: VANILLA, MMOITEMS
+    type: MMOITEMS
+    # Vanilla Material name or MMOItem ID
+    id: EVOLUTION_CATALYST
+    # Only required if type is MMOITEMS (e.g. MATERIAL, CONSUMABLE)
+    mmoitem-type: CONSUMABLE
+
 formats:
   upgrade-level: "&7Upgrade Level: &e%level%"
   enhancement-preview-header: "&eEnhancement Preview:"
@@ -77,6 +134,7 @@ formats:
     materials-header: "&7Materials:"
     material-met: "&a✔ &7%material% x%amount%"
     material-not-met: "&c❌ &7%material% x%amount%"
+    success-rate: "&7Success Rate: &a%success_rate%%"
 stat-formats:
   default: "&7%stat%: &f%original% &7-> &a%new% &e(+%diff%)"
   specific:
@@ -89,7 +147,8 @@ upgrade-settings:
   damage-increase-percent: 5.0
   # Title format: %name% +%level%
   title-format: "%name% &e+%level%"
-
+  base-success-rate: 90.0
+  per-level-success-rate-decrease: 5.0
   # Cost settings
   cost:
     vault:
@@ -132,3 +191,4 @@ messages:
   evolution-not-enough-money: "&cYou do not have enough money."
   evolution-missing-materials: "&cYou are missing required materials."
   evolution-error: "&cAn error occurred while creating the evolved item."
+debug: false
