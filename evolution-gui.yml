@@ -1,0 +1,68 @@
+evolution-gui:
+  title: "&8ᴇᴠᴏʟᴜᴛɪᴏɴ ѕᴛᴀᴛɪᴏɴ"
+  size: 45
+  slots:
+    source-item: 10
+    preview-item: 12
+    confirm-button: 16
+    chance-item: 11
+    material-display: [28,29,30,31,32,33,34]
+  filler:
+    material: "PURPLE_STAINED_GLASS_PANE"
+    name: " "
+    custom-model-data: 10011
+  items:
+    confirm-button:
+      material: "MAGENTA_STAINED_GLASS_PANE"
+      name: "&d&lᴇᴠᴏʟᴠᴇ"
+      custom-model-data: 10012
+      lore:
+        - "&7Click to evolve your item."
+        - "&7Cost: &e%cost%$"
+        - "&7Materials:"
+        - "%materials%"
+        - "&7Success Rate: &a%success_rate%%"
+    no-item-button:
+      material: "RED_STAINED_GLASS_PANE"
+      name: "&c&lɴᴏ ɪᴛᴇᴍ"
+      custom-model-data: 10013
+      lore:
+        - "&7Place an item in the slot to evolve."
+
+    chance-item-display:
+      material: "YELLOW_STAINED_GLASS_PANE"
+      name: "&e&lᴄʜᴀɴᴄᴇ ɪᴛᴇᴍ"
+      custom-model-data: 0
+      lore:
+        - "&7Place a chance item here"
+        - "&7to increase success rate."
+
+    preview-item-display:
+      material: "BLUE_STAINED_GLASS_PANE"
+      name: "&b&lᴘʀᴇᴠɪᴇᴡ"
+      custom-model-data: 0
+      lore:
+        - "&7The evolved item will"
+        - "&7appear here."
+
+  # Settings for material display items in the GUI
+  material-display:
+    enabled: true
+    # Lore format for the displayed material item
+    # %status% will be replaced with ✔ or ❌
+    lore:
+      - "&7Amount: &e%amount%"
+      - "&7Status: %status%"
+    # Custom status messages
+    status-met: "&a✔"
+    status-not-met: "&c❌"
+  
+  chance-item:
+    # Increase percentage success rate
+    increase-chance: 15.0
+    # Options: VANILLA, MMOITEMS
+    type: MMOITEMS
+    # Vanilla Material name or MMOItem ID
+    id: EVOLUTION_CATALYST
+    # Only required if type is MMOITEMS (e.g. MATERIAL, CONSUMABLE)
+    mmoitem-type: CONSUMABLE
